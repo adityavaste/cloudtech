@@ -180,7 +180,7 @@ export default function HomePage() {
       </section>
 
       {/* Business Services */}
-      <div className="py-12 sm:py-16 lg:py-24">
+      <div className="py-5 sm:py-5 lg:py-24">
         <FeatureGrid
           title="Business Launch Services"
           subtitle="Complete registration and compliance solutions to start your business legally"
@@ -189,55 +189,10 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Data Management */}
-     <section className="mt-2 sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-5 sm:mb-6 text-balance">
-                Business Data Management
-              </h2>
-
-              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-8">
-                Secure, scalable storage and management of your
-                business-critical data with enterprise-grade security and
-                compliance.
-              </p>
-
-              <ul className="space-y-4">
-                {[
-                  "Secure cloud storage",
-                  "Automated backups",
-                  "Disaster recovery",
-                  "Compliance monitoring",
-                  "24/7 accessibility",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/services/data-management"
-                className="inline-flex items-center justify-center mt-8 sm:mt-10 w-full sm:w-auto bg-primary text-primary-foreground px-6 sm:px-8 py-3 rounded-lg hover:bg-blue-700 transition-smooth font-semibold"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <div className="bg-gradient-blue rounded-xl h-56 sm:h-72 lg:h-80 flex items-center justify-center">
-                <Lock className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 text-white opacity-50" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* AWS Hosting Benefits */}
-      <div className="py-12 sm:py-16 lg:py-24">
+      <div className="py-2 sm:py-8 lg:py-16">
         <FeatureGrid
           title="AWS Cloud Hosting Benefits"
           subtitle="Enterprise-grade infrastructure for reliable, scalable performance"
