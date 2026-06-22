@@ -20,7 +20,7 @@ export default function AboutPage() {
     <MainLayout>
       {/* Hero */}
       <Hero
-        title="About Business Solutions"
+        title="About CloudTech"
         subtitle="We're passionate about helping entrepreneurs and small businesses succeed online."
         backgroundGradient
       />
@@ -33,7 +33,7 @@ export default function AboutPage() {
           </h2>
           <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
             <p>
-              Business Solutions was founded by a team of passionate developers and entrepreneurs who witnessed the struggle of small business owners trying to establish their online presence. We saw that most businesses had great ideas and products, but lacked affordable, accessible technology solutions.
+              CloudTech was founded by a team of passionate developers and entrepreneurs who witnessed the struggle of small business owners trying to establish their online presence. We saw that most businesses had great ideas and products, but lacked affordable, accessible technology solutions.
             </p>
             <p>
               We started this company with a mission: to bridge the gap between small businesses and world-class technology. We wanted to provide professional web development, hosting, business registration, and support services at prices that make sense for startups and small enterprises.
@@ -123,17 +123,17 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Rajesh Kumar',
+                name: 'Aditya Vaste',
                 role: 'Founder & CTO',
-                bio: 'Full-stack developer with 10+ years experience building scalable web applications.',
+                bio: 'Full-stack developer with years experience building scalable web applications.',
               },
               {
-                name: 'Priya Sharma',
+                name: 'Vishal Jadhav',
                 role: 'Business Lead',
                 bio: 'Entrepreneur passionate about helping small businesses succeed with technology.',
               },
               {
-                name: 'Amit Patel',
+                name: 'Aditya ',
                 role: 'DevOps & Cloud Specialist',
                 bio: 'AWS certified expert specializing in cloud infrastructure and security.',
               },
@@ -159,7 +159,7 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-4">
             {[
-              'We have 10+ years of combined experience in web development, hosting, and business services.',
+              'We have years of combined experience in web development, hosting, and business services.',
               'We work specifically with small businesses and understand the unique challenges you face.',
               'Our team is available and responsive. We answer your questions and solve your problems.',
               'We use only the latest technologies like AWS, React, Next.js, and more.',
@@ -179,10 +179,13 @@ export default function AboutPage() {
 
       {/* CTA */}
       <CTASection
-        title="Ready to Work With Us?"
-        subtitle="Schedule a free consultation and let's discuss how we can help your business grow."
-        primaryCta={{ text: 'Book Consultation', href: '/contact' }}
-      />
+  title="Ready to Work With Us?"
+  subtitle="Schedule a free consultation and let's discuss how we can help your business grow."
+  primaryCta={{
+    text: "Book Consultation",
+    href: "https://wa.me/917350247244?text=Hi,%20I'm%20interested%20in%20your%20business%20services.",
+  }}
+/>
     </MainLayout>
      </>
   )

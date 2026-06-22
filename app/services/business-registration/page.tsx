@@ -132,7 +132,7 @@ export default function BusinessRegistrationPage() {
       <Hero
         title="Business Registration & Compliance Services"
         subtitle="Complete, hassle-free business registration and ongoing compliance management to help you start and grow legally."
-        primaryCta={{ text: 'Get Registration Help', href: '/contact' }}
+        primaryCta={{ text: 'Get Registration Help', href: "https://wa.me/917350247244?text=Hello%20%F0%9F%91%8B%20Team%2C%20I%20need%20assistance%20with%20a%20registration%20process."}}
         backgroundGradient
       />
 

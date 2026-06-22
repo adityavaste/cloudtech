@@ -6,6 +6,7 @@ interface CTASectionProps {
   primaryCta: {
     text: string
     href: string
+    target?: '_blank' | '_self'
   }
 }
 

@@ -73,23 +73,23 @@ export const HOW_WE_WORK = [
 export const TESTIMONIALS = [
   {
     quote: 'They transformed our business website and helped us with registration. Highly professional and affordable.',
-    author: 'Rajesh Kumar',
+    author: 'Chandrakant Satpute',
     role: 'Founder',
-    company: 'TechStart Solutions',
+    company: 'Kalyani finance',
     rating: 5,
   },
   {
     quote: 'Amazing support team. They explained everything clearly without technical jargon. Highly recommended!',
-    author: 'Priya Sharma',
+    author: 'Vishal Jadhav',
     role: 'Business Owner',
-    company: 'Fashion & Style Boutique',
+    company: 'Resistor vyapar',
     rating: 5,
   },
   {
     quote: 'Our hosting is now on AWS and performance improved significantly. Great migration experience.',
-    author: 'Amit Patel',
+    author: 'Aditya Vaste',
     role: 'CTO',
-    company: 'E-commerce Ventures',
+    company: 'aditya exports',
     rating: 5,
   },
 ]
@@ -97,7 +97,7 @@ export const TESTIMONIALS = [
 export const PRICING_PLANS = [
   {
     name: 'Starter',
-    price: '$299',
+    price: '₹5,000',
     description: 'Perfect for small businesses',
     features: [
       'Basic website (5 pages)',
@@ -112,7 +112,7 @@ export const PRICING_PLANS = [
   },
   {
     name: 'Growth',
-    price: '$699',
+    price: '₹30,000',
     description: 'For growing businesses',
     features: [
       'Advanced website (15 pages)',
@@ -175,9 +175,9 @@ export const FAQ_ITEMS = [
 
 export const PORTFOLIO_ITEMS = [
   {
-    title: 'E-commerce Platform Launch',
+    title: 'finance',
     description: 'Built a complete e-commerce solution with payment integration for an online retailer.',
-    category: 'E-commerce',
+    category: 'finance',
     result: '150% increase in online sales',
   },
   {

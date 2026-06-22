@@ -15,11 +15,11 @@ export const organizationSchema = {
   "url": "https://cloudtech.host",
   "logo": "https://cloudtech.host/logo.png",
   "email": "support@cloudtech.host",
-  "telephone": "+91-9876543210",
+  "telephone": "+91-7350247244",
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+91-9876543210",
+      "telephone": "+91-7350247244",
       "contactType": "customer support",
       "areaServed": "IN",
       "availableLanguage": [
