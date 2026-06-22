@@ -27,7 +27,7 @@ export const organizationSchema = {
   description:
     "CloudTech provides GST Registration, FSSAI License, Digital Signature Certificates (DSC), Company Registration, Data Management, AWS Hosting, and business compliance services across India.",
   email: "support@cloudtech.host",
-  telephone: "+91-XXXXXXXXXX",
+  telephone: "+91-7350247244",
 
   address: {
     "@type": "PostalAddress",
