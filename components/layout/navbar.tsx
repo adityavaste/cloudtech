@@ -1,33 +1,32 @@
-'use client'
-
-import Link from 'next/link'
-import { useState } from 'react'
-import { ChevronDown, Menu, X } from 'lucide-react'
-
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { Server } from "lucide-react";
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
-
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >
-            <div className="w-12 h-8 sm:w-14 sm:h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm sm:text-lg">
-                AWS
-              </span>
-            </div>
+         <Link
+  href="/"
+  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+>
+  <div className="flex items-center gap-2 sm:gap-3">
+    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+      <Server className="text-white w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+    </div>
 
-            <span className="hidden sm:block font-bold text-lg text-foreground">
-              CloudTech
-            </span>
-          </Link>
+    <span className="text-lg sm:text-xl lg:text-2xl font-bold leading-none">
+      Cloud<span className="text-blue-600">Tech</span>
+    </span>
+  </div>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
@@ -53,7 +52,6 @@ export function Navbar() {
               </button>
 
               <div className="absolute left-0 mt-2 w-56 rounded-xl border border-border bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-
                 <Link
                   href="/services/business-registration"
                   className="block px-5 py-3 hover:bg-blue-50 rounded-t-xl text-sm"
@@ -122,18 +120,13 @@ export function Navbar() {
             className="md:hidden p-2 rounded-lg"
             aria-label="Toggle Menu"
           >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden py-4 border-t animate-in">
-
             <Link
               href="/"
               className="block px-4 py-3 rounded-lg hover:bg-blue-50 font-medium"
@@ -155,17 +148,15 @@ export function Navbar() {
                 className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-blue-50 font-medium"
               >
                 Services
-
                 <ChevronDown
                   className={`w-4 h-4 transition-transform ${
-                    servicesOpen ? 'rotate-180' : ''
+                    servicesOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {servicesOpen && (
                 <div className="ml-4 mt-1">
-
                   <Link
                     href="/services/business-registration"
                     className="block px-4 py-2 rounded-lg hover:bg-blue-50 text-sm"
@@ -217,10 +208,9 @@ export function Navbar() {
             >
               Contact
             </Link>
-
           </div>
         )}
       </div>
     </nav>
-  )
+  );
 }
