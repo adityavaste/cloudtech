@@ -96,24 +96,7 @@ const DATA_FAQ = [
   },
 ]
 
-export const metadata = {
-  title: "Business Data Management Services | Secure Document Management | CloudTech",
-  description:
-    "Professional business data management services including document organization, cloud storage, digital record management, compliance documents, backups, and secure business data solutions across India.",
 
-  keywords: [
-    "Data Management Services",
-    "Business Data Management",
-    "Document Management",
-    "Digital Record Management",
-    "Cloud Document Storage",
-    "Business Document Storage",
-    "Compliance Document Management",
-    "Business Data Backup",
-    "Document Organization",
-    "CloudTech Data Management",
-  ],
-};
 
 export default function DataManagementPage() {
   const servicesFeatures = DATA_SERVICES.map((service) => ({

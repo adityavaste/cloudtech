@@ -190,7 +190,7 @@ export default function HomePage() {
       </div>
 
       {/* Data Management */}
-      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
+     <section className="mt-2 sm:py-12 lg:py-24 px-4 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
