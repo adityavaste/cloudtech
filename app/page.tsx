@@ -37,7 +37,7 @@ import Link from 'next/link'
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cloudtech.host.com"),
+  metadataBase: new URL("https://cloudtech.host"),
 
   title: "AWS Website Development & Business Registration Services",
 
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "AWS Website Development & Business Registration Services",
     description:
       "Build your business online with professional websites, AWS cloud hosting, GST, Shop Act, Udyam and IEC registration services.",
-    url: "https://cloudtech.host.com",
+    url: "https://cloudtech.host",
     siteName: "Your Company Name",
     images: [
       {
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://cloudtech.host.com",
+    canonical: "https://cloudtech.host",
   },
 };
 
@@ -122,7 +122,7 @@ export default function HomePage() {
       <Hero
         title="Professional Websites Built Around Your Business"
         subtitle="AWS-powered professional website development, secure cloud hosting, GST registration, Shop Act, Udyam, IEC, MSME registration, and complete business compliance services for startups and small businesses."
-        primaryCta={{ text: 'Book Free Consultation', href: '/contact' }}
+        primaryCta={{ text: 'Book Free Consultation', href: 'https://wa.me/917350247244?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20consultation.%20Please%20guide%20me%20through%20the%20next%20steps.' }}
         secondaryCta={{ text: 'View Our Services', href: '/services' }}
         backgroundGradient
       />
@@ -131,7 +131,7 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-balance">
-            Why Choose Business Solutions?
+            Why Choose CloudTech?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseFeatures.map((feature, i) => (

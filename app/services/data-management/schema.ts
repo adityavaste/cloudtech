@@ -15,8 +15,8 @@ export const dataManagementServiceSchema: WithContext<Service> = {
     "@type": "ProfessionalService",
     name: "CloudTech",
     url: BASE_URL,
-    telephone: "+91-XXXXXXXXXX", // Replace
-    email: "support@cloudtech.host", // Replace
+    telephone: "+91-7350247244", // Replace
+    email: "adityavaste@gmail.com", // Replace
   },
 
   serviceType: "Data Management",

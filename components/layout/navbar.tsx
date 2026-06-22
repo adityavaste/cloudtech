@@ -14,10 +14,10 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-            <div className="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">B</span>
+            <div className="w-15 h-9 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-lg">AWS</span>
             </div>
-            <span className="font-bold text-lg text-foreground hidden sm:inline">Business Solutions</span>
+            <span className="font-bold text-lg text-foreground hidden sm:inline">CloudTech</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,11 +63,14 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link href="/contact" className="btn-gradient-primary px-6 py-2.5 rounded-lg font-bold shadow-md hover:shadow-lg">
-              Book Consultation
-            </Link>
-          </div>
+            <a
+              href="https://wa.me/917350247244?text=Hi!%20%F0%9F%91%8B%20I%20would%20like%20to%20start%20my%20business%20journey%20and%20I'm%20interested%20in%20your%20business%20registration%20services.%20Please%20guide%20me%20through%20the%20process."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block btn-gradient-primary px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl"
+            >
+             Book Consultation
+            </a>
 
           {/* Mobile Menu Button */}
           <button

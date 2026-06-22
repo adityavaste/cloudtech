@@ -84,22 +84,22 @@ export default function ContactPage() {
             <div className="md:col-span-1 space-y-6">
               <div>
                 <h3 className="font-semibold text-lg mb-2">Email</h3>
-                <a href="mailto:hello@business.com" className="text-primary hover:underline">
-                  hello@business.com
+                <a href="mailto:cloudtechenquiry@gmail.com" className="text-primary hover:underline">
+                  cloudtechenquiry@gmail.com
                 </a>
               </div>
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                <a href="tel:+919876543210" className="text-primary hover:underline">
-                  +91 9876 543 210
+                <a href="tel:+917350247244" className="text-primary hover:underline">
+                  +91 7350247244
                 </a>
               </div>
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Send us a message
+                <a href="https://wa.me/917350247244" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  💬 Send us a message
                 </a>
               </div>
 

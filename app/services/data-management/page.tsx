@@ -149,7 +149,7 @@ export default function DataManagementPage() {
       <Hero
         title="Secure Business Data Management"
         subtitle="Protect, organize, and manage all your business-critical data with enterprise-grade security and compliance."
-        primaryCta={{ text: 'Secure Your Data', href: '/contact' }}
+        primaryCta={{ text: 'Secure Your Data', href: "https://wa.me/917350247244?text=Hello%20%F0%9F%91%8B%20Team%2C%20I%20would%20like%20to%20discuss%20your%20Data%20Management%20services." }}
         backgroundGradient
       />
 
@@ -277,7 +277,7 @@ export default function DataManagementPage() {
       <CTASection
         title="Protect Your Business Data Today"
         subtitle="Schedule a free data security assessment and learn how we can safeguard your information."
-        primaryCta={{ text: 'Get Free Assessment', href: '/contact' }}
+        primaryCta={{ text: 'Get Free Assessment', href: 'https://docs.google.com/forms/d/e/1FAIpQLScJbNIw0bKs1npl188WDzJSCUmdOpP5vCH-qW-2vzQo45G4ZQ/viewform?usp=publish-editor' }}
       />
     </MainLayout>
     </>

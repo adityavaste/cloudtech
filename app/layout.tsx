@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cloudtech.host.com"),
+  metadataBase: new URL("https://cloudtech.host"),
 
   title: {
     default:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Business Solutions",
-      url: "https://cloudtech.host.com",
+      url: "https://cloudtech.host",
     },
   ],
 
@@ -84,13 +84,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://cloudtech.host.com",
+    canonical: "https://cloudtech.host",
   },
 
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://cloudtech.host.com",
+    url: "https://cloudtech.host",
     siteName: "Business Solutions",
 
     title: "AWS Website Development & Business Registration Services",
@@ -156,8 +156,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Business Solutions",
-  url: "https://cloudtech.host.com",
-  logo: "https://cloudtech.host.com/logo.png",
+  url: "https://cloudtech.host",
+  logo: "https://cloudtech.host/logo.png",
   email: "info@yourdomain.com",
   telephone: "+917350247244",
   sameAs: [
@@ -172,8 +172,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Business Solutions",
-  image: "https://cloudtech.host.com/logo.png",
-  url: "https://.cloudtech.host.com",
+  image: "https://cloudtech.host/logo.png",
+  url: "https://.cloudtech.host",
   telephone: "+91XXXXXXXXXX",
   email: "adityavaste@gmail.com",
 
@@ -214,22 +214,22 @@ const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
 
-  "@id": "https://cloudtech.host.com/#professionalservice",
+  "@id": "https://cloudtech.host/#professionalservice",
 
   name: "Your Company Name",
 
-  url: "https://cloudtech.host.com",
+  url: "https://cloudtech.host",
 
-  logo: "https://cloudtech.host.com/logo.png",
+  logo: "https://cloudtech.host/logo.png",
 
-  image: "https://cloudtech.host.com/og-image.jpg",
+  image: "https://cloudtech.host/og-image.jpg",
 
   description:
     "Professional website development and business registration services including GST Registration, IEC Registration, Udyam Registration, Shop Act License, Digital Signature Certificate, Trademark Registration, and AWS managed hosting.",
 
-  telephone: "+91-9876543210",
+  telephone: "+91-7350247244",
 
-  email: "support@cloudtech.host.com",
+  email: "support@cloudtech.host",
 
   priceRange: "₹₹",
 
@@ -362,9 +362,9 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
 
-  "@id": "https://cloudtech.host.com/#website",
+  "@id": "https://cloudtech.host/#website",
 
-  url: "https://cloudtech.host.com",
+  url: "https://cloudtech.host",
 
   name: "Your Company Name",
 
@@ -381,7 +381,7 @@ const websiteSchema = {
 
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://cloudtech.host.com/search?q={search_term_string}",
+    target: "https://cloudtech.host/search?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
