@@ -1,9 +1,11 @@
+import Link from 'next/link'
 import { ReactNode } from 'react'
 
 interface Feature {
   icon: ReactNode
   title: string
   description: string
+  link?: string
 }
 
 interface FeatureGridProps {
@@ -44,20 +46,33 @@ export function FeatureGrid({
         )}
 
         <div className={`grid grid-cols-1 ${gridClass} gap-8`}>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white border border-border rounded-xl p-8 transition-smooth hover:shadow-lg hover:shadow-blue-100/50 hover:-translate-y-1 hover:border-accent"
-            >
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center">
-                  {feature.icon}
+          {features.map((feature, index) => {
+            const Card = (
+              <div className="bg-white border border-border rounded-xl p-8 transition-smooth hover:shadow-lg hover:shadow-blue-100/50 hover:-translate-y-1 hover:border-accent cursor-pointer h-full">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center">
+                    {feature.icon}
+                  </div>
                 </div>
+
+                <h3 className="text-lg font-bold text-foreground mb-3">
+                  {feature.title}
+                </h3>
+
+                <p className="text-secondary text-base leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-3">{feature.title}</h3>
-              <p className="text-secondary text-base leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
+            )
+
+            return feature.link ? (
+              <Link key={index} href={feature.link} className="block h-full">
+                {Card}
+              </Link>
+            ) : (
+              <div key={index}>{Card}</div>
+            )
+          })}
         </div>
       </div>
     </section>

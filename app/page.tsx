@@ -33,7 +33,11 @@ import {
   Headphones,
 } from "lucide-react";
 import Link from "next/link";
-
+const businessServicesFeatures = BUSINESS_SERVICES.map(service => ({
+  title: service.title,
+  description: service.description,
+  link: service.link,
+}));
 export const metadata: Metadata = {
   metadataBase: new URL("https://cloudtech.host"),
 
@@ -100,13 +104,14 @@ export default function HomePage() {
     description: item.description,
   }));
 
-  const businessServicesFeatures = BUSINESS_SERVICES.slice(0, 6).map(
-    (item) => ({
-      icon: <Briefcase className="w-6 h-6 text-primary" />,
-      title: item.title,
-      description: item.description,
-    }),
-  );
+ const businessServicesFeatures = BUSINESS_SERVICES.slice(0, 6).map(
+  (item) => ({
+    icon: <Briefcase className="w-6 h-6 text-primary" />,
+    title: item.title,
+    description: item.description,
+    link: item.link,
+  }),
+);
 
   const awsFeatures = AWS_BENEFITS.map((item) => ({
     icon: <Cloud className="w-6 h-6 text-primary" />,
@@ -181,12 +186,12 @@ export default function HomePage() {
 
       {/* Business Services */}
       <div className="py-5 sm:py-5 lg:py-24">
-        <FeatureGrid
-          title="Business Launch Services"
-          subtitle="Complete registration and compliance solutions to start your business legally"
-          features={businessServicesFeatures}
-          columns={3}
-        />
+       <FeatureGrid
+  title="Business Launch Services"
+  subtitle="Complete registration and compliance solutions to start your business legally"
+  features={businessServicesFeatures}
+  columns={3}
+/>
       </div>
 
      
