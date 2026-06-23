@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const SERVICES = [
   {
     title: 'Website Development',
@@ -175,22 +176,30 @@ export const FAQ_ITEMS = [
 
 export const PORTFOLIO_ITEMS = [
   {
-    title: 'finance',
+    title: 'Finance Platform', // Slightly polished title for better presentation
     description: 'Built a complete e-commerce solution with payment integration for an online retailer.',
-    category: 'finance',
+    category: 'Finance',
     result: '150% increase in online sales',
+    background: 'The client needed a secure, high-throughput financial portal to handle a surging volume of online retail transactions. The legacy system suffered from high cart abandonment due to complex checkout flows and frequent payment timeouts. We designed a streamlined, multi-gateway payment architecture to resolve these bottlenecks.',
+    image: '/finance.png', // Place this file in your /public folder
   },
   {
     title: 'SaaS Application',
     description: 'Developed a subscription-based project management tool hosted on AWS.',
     category: 'SaaS',
     result: '500+ active users in first month',
+    background: 'Remote teams lacked a centralized, real-time tool to track agile sprints without overwhelming clutter. Our objective was to build a highly scalable, multi-tenant SaaS infrastructure from scratch. Leveraging AWS serverless architecture allowed us to handle rapid initial user onboarding while keeping operational costs low.',
+   
+    image: '/saas.png', 
   },
   {
     title: 'Local Service Business Website',
     description: 'Created a professional website for a local service provider with appointment booking.',
     category: 'Business Website',
     result: '3x increase in inquiries',
+    background: 'A local service provider relied heavily on manual phone bookings, leading to missed opportunities after business hours. We built a localized web presence integrated with an automated, calendar-syncing booking engine, transforming their digital footprint into a passive lead-generation machine.',
+   
+    image: '/local.png', 
   },
 ]
 

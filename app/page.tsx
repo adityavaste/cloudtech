@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-
+import Image from "next/image";
 import { MainLayout } from "@/components/layout/main-layout";
 import { Hero } from "@/components/sections/hero";
 import { FeatureGrid } from "@/components/sections/feature-grid";
@@ -247,9 +247,14 @@ export default function HomePage() {
                 key={i}
                 className="bg-card border border-border rounded-xl p-5 sm:p-6 hover:border-primary transition-smooth"
               >
-                <div className="bg-gradient-blue rounded-lg h-48 sm:h-52 lg:h-56 mb-5 flex items-center justify-center">
-                  <BarChart3 className="w-16 h-16 lg:w-20 lg:h-20 text-white opacity-30" />
-                </div>
+                <div className="relative h-40 w-full overflow-hidden">
+  <Image
+    src={item.image}
+    alt={item.title}
+    fill
+    className="object-cover transition-transform duration-300 hover:scale-105"
+  />
+</div>
 
                 <h3 className="text-lg font-semibold text-foreground mb-2">
                   {item.title}
