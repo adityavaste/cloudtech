@@ -107,7 +107,7 @@ export const PRICING_PLANS = [
       'Email support',
     ],
     ctaText: 'Get Started',
-    ctaHref: '/contact',
+    ctaHref: '/',
     isRecommended: false,
   },
   {

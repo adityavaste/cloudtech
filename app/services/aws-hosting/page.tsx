@@ -182,8 +182,13 @@ export default function AWSHostingPage() {
         <Hero
           title="AWS Cloud Hosting for Enterprise Performance"
           subtitle="Reliable, scalable cloud infrastructure powered by Amazon Web Services. Deploy your website with confidence, knowing it will handle any amount of traffic."
-          primaryCta={{ text: "Discuss Your Hosting Needs", href: "/contact" }}
+          primaryCta={{ text: "Discuss Your Hosting Needs", href: "https://docs.google.com/forms/d/e/1FAIpQLSeuC3NADjP4kI5kpny984oVgqlD91-teQBfhfiCTB8wwSrnmw/viewform?usp=publish-editor",external: true,
+           
+           }}
+          
+          
           backgroundGradient
+          
         />
 
         {/* What is AWS */}
@@ -356,9 +361,9 @@ export default function AWSHostingPage() {
           title="Ready to Move to AWS?"
           subtitle="Let us handle the technical details. Get enterprise-grade hosting at a fraction of the cost."
           primaryCta={{
-            
             text: "Talk to Our Technical Team",
-            href: "https://docs.google.com/forms/d/e/1FAIpQLSdXU3Ck8rV1J6jy2zUkKRQAb4dKrVTrs3wxQRSK8GylD_-qNA/viewform?usp=publish-editor",
+            href: "https://docs.google.com/forms/d/e/1FAIpQLSeuC3NADjP4kI5kpny984oVgqlD91-teQBfhfiCTB8wwSrnmw/viewform?usp=publish-editor",
+           external: true,
           }}
         />
       </MainLayout>

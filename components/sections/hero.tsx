@@ -1,17 +1,19 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 interface HeroProps {
-  title: string
-  subtitle: string
+  title: string;
+  subtitle: string;
   primaryCta?: {
-    text: string
-    href: string
-  }
+    text: string;
+    href: string;
+    external?: boolean;
+  };
   secondaryCta?: {
-    text: string
-    href: string
-  }
-  backgroundGradient?: boolean
+    text: string;
+    href: string;
+    external?: boolean;
+  };
+  backgroundGradient?: boolean;
 }
 
 export function Hero({
@@ -24,7 +26,7 @@ export function Hero({
   return (
     <section
       className={`relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-        backgroundGradient ? 'gradient-blue-light' : 'bg-background'
+        backgroundGradient ? "gradient-blue-light" : "bg-background"
       }`}
     >
       {/* Background decorative elements */}
@@ -55,25 +57,45 @@ export function Hero({
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {primaryCta && (
-            <Link
-              href={primaryCta.href}
-              className="btn-gradient-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl text-center shadow-lg hover-lift"
-            >
-              {primaryCta.text}
-            </Link>
-          )}
+          {primaryCta &&
+            (primaryCta.external ? (
+              <a
+                href={primaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gradient-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl text-center shadow-lg hover-lift"
+              >
+                {primaryCta.text}
+              </a>
+            ) : (
+              <Link
+                href={primaryCta.href}
+                className="btn-gradient-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl text-center shadow-lg hover-lift"
+              >
+                {primaryCta.text}
+              </Link>
+            ))}
 
-          {secondaryCta && (
-            <Link
-              href={secondaryCta.href}
-              className="w-full sm:w-auto border-2 border-primary text-primary px-6 sm:px-8 py-3 rounded-xl text-center font-semibold hover:bg-primary hover:text-primary-foreground transition-smooth"
-            >
-              {secondaryCta.text}
-            </Link>
-          )}
+         {secondaryCta &&
+  (secondaryCta.external ? (
+    <a
+      href={secondaryCta.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full sm:w-auto border-2 border-primary text-primary px-6 sm:px-8 py-3 rounded-xl text-center font-semibold hover:bg-primary hover:text-primary-foreground transition-smooth"
+    >
+      {secondaryCta.text}
+    </a>
+  ) : (
+    <Link
+      href={secondaryCta.href}
+      className="w-full sm:w-auto border-2 border-primary text-primary px-6 sm:px-8 py-3 rounded-xl text-center font-semibold hover:bg-primary hover:text-primary-foreground transition-smooth"
+    >
+      {secondaryCta.text}
+    </Link>
+  ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

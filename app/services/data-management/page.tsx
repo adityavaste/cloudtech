@@ -96,7 +96,24 @@ const DATA_FAQ = [
   },
 ]
 
+export const metadata = {
+  title: "Business Data Management Services | Secure Document Management | CloudTech",
+  description:
+    "Professional business data management services including document organization, cloud storage, digital record management, compliance documents, backups, and secure business data solutions across India.",
 
+  keywords: [
+    "Data Management Services",
+    "Business Data Management",
+    "Document Management",
+    "Digital Record Management",
+    "Cloud Document Storage",
+    "Business Document Storage",
+    "Compliance Document Management",
+    "Business Data Backup",
+    "Document Organization",
+    "CloudTech Data Management",
+  ],
+};
 
 export default function DataManagementPage() {
   const servicesFeatures = DATA_SERVICES.map((service) => ({
@@ -132,7 +149,7 @@ export default function DataManagementPage() {
       <Hero
         title="Secure Business Data Management"
         subtitle="Protect, organize, and manage all your business-critical data with enterprise-grade security and compliance."
-        primaryCta={{ text: 'Secure Your Data', href: "https://wa.me/917350247244?text=Hello%20%F0%9F%91%8B%20Team%2C%20I%20would%20like%20to%20discuss%20your%20Data%20Management%20services." }}
+        primaryCta={{ text: 'Secure Your Data', href: "https://docs.google.com/forms/d/e/1FAIpQLSesEC04VSQ7Hiw4bbhziAgzt5o4xN02vMNazChsJAL-QmFuxg/viewform?usp=publish-editor", external: true }}
         backgroundGradient
       />
 
@@ -260,7 +277,7 @@ export default function DataManagementPage() {
       <CTASection
         title="Protect Your Business Data Today"
         subtitle="Schedule a free data security assessment and learn how we can safeguard your information."
-        primaryCta={{ text: 'Get Free Assessment', href: 'https://docs.google.com/forms/d/e/1FAIpQLScJbNIw0bKs1npl188WDzJSCUmdOpP5vCH-qW-2vzQo45G4ZQ/viewform?usp=publish-editor' }}
+        primaryCta={{ text: 'Get Free Assessment', href: 'https://docs.google.com/forms/d/e/1FAIpQLSesEC04VSQ7Hiw4bbhziAgzt5o4xN02vMNazChsJAL-QmFuxg/viewform?usp=publish-editor' , external: true}}
       />
     </MainLayout>
     </>

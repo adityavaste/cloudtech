@@ -1,13 +1,18 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 interface CTASectionProps {
-  title: string
-  subtitle?: string
-  primaryCta: {
-    text: string
-    href: string
-    target?: '_blank' | '_self'
-  }
+  title: string;
+  subtitle: string;
+  primaryCta?: {
+    text: string;
+    href: string;
+    external?: boolean;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+    external?: boolean;
+  };
 }
 
 export function CTASection({ title, subtitle, primaryCta }: CTASectionProps) {
@@ -31,13 +36,27 @@ export function CTASection({ title, subtitle, primaryCta }: CTASectionProps) {
           </p>
         )}
 
-        <Link
-          href={primaryCta.href}
-          className="inline-block w-full sm:w-auto bg-white text-primary px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-smooth"
-        >
-          {primaryCta.text}
-        </Link>
+       <div className="flex justify-center">
+  {primaryCta &&
+    (primaryCta.external ? (
+      <a
+        href={primaryCta.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      >
+        {primaryCta.text}
+      </a>
+    ) : (
+      <Link
+        href={primaryCta.href}
+        className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      >
+        {primaryCta.text}
+      </Link>
+    ))}
+</div>
       </div>
     </section>
-  )
+  );
 }
