@@ -13,20 +13,20 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
-         <Link
-  href="/"
-  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
->
-  <div className="flex items-center gap-2 sm:gap-3">
-    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center">
-      <Server className="text-white w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-    </div>
+          <Link
+            href="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                <Server className="text-white w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+              </div>
 
-    <span className="text-lg sm:text-xl lg:text-2xl font-bold leading-none">
-      Cloud<span className="text-blue-600">Tech</span>
-    </span>
-  </div>
-</Link>
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold leading-none">
+                Cloud<span className="text-blue-600">Tech</span>
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
