@@ -98,120 +98,149 @@ export default function ShopActPage() {
         secondaryCta={{ text: 'Check Requirements', href: '/contact' }}
         backgroundGradient
       />
+{/* What is Shop Act */}
+<section className="py-16 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-5 lg:mb-6">
+      What is Shop Act Registration?
+    </h2>
+    <p className="text-base sm:text-lg text-secondary mb-4 sm:mb-5 lg:mb-6 leading-relaxed">
+      The Shop Act is state labor legislation that regulates working hours, wages, and conditions of work for employees in shops 
+      and commercial establishments. Shop Act registration is mandatory for retail shops, offices, and service establishments.
+    </p>
+    <p className="text-base sm:text-lg text-secondary leading-relaxed">
+      Registration ensures compliance with state labor laws and employee protection provisions. Each state has its own Shop Act, 
+      and we help you navigate the specific requirements for your location.
+    </p>
+  </div>
+</section>
 
-      {/* What is Shop Act */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-6">What is Shop Act Registration?</h2>
-          <p className="text-lg text-secondary mb-6 leading-relaxed">
-            The Shop Act is state labor legislation that regulates working hours, wages, and conditions of work for employees in shops 
-            and commercial establishments. Shop Act registration is mandatory for retail shops, offices, and service establishments.
-          </p>
-          <p className="text-lg text-secondary leading-relaxed">
-            Registration ensures compliance with state labor laws and employee protection provisions. Each state has its own Shop Act, 
-            and we help you navigate the specific requirements for your location.
-          </p>
+{/* Eligible Businesses */}
+<section className="py-16 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 sm:mb-10 lg:mb-12">
+      Shops & Businesses That Need Shop Act License
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
+      {ELIGIBLE_BUSINESSES.map((business, i) => (
+        <div
+          key={i}
+          className="flex items-center gap-3 sm:gap-4 bg-white rounded-lg p-3 sm:p-4 border border-border"
+        >
+          <Store className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+          <span className="text-sm sm:text-base text-secondary font-medium">
+            {business}
+          </span>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
-      {/* Eligible Businesses */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Shops & Businesses That Need Shop Act License</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {ELIGIBLE_BUSINESSES.map((business, i) => (
-              <div key={i} className="flex items-center gap-4 bg-white rounded-lg p-4 border border-border">
-                <Store className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-secondary font-medium">{business}</span>
-              </div>
-            ))}
+{/* Requirements */}
+<section className="py-16 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 sm:mb-10 lg:mb-12">
+      Shop Act Registration Process
+    </h2>
+
+    <div className="space-y-5 sm:space-y-6">
+      {[
+        { step: 1, title: 'Pre-Registration Consultation', desc: 'We review your business location and type to determine Shop Act applicability.' },
+        { step: 2, title: 'Documentation', desc: 'Gather PAN, Aadhar, property papers, and shop details.' },
+        { step: 3, title: 'Municipal Application', desc: 'Submit application to your municipal corporation with all required documents.' },
+        { step: 4, title: 'Inspection', desc: 'Municipal inspector verifies your shop premises and conditions.' },
+        { step: 5, title: 'License Issuance', desc: 'Receive your Shop Act license certificate within 1-2 weeks.' },
+      ].map((item) => (
+        <div
+          key={item.step}
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 pb-5 sm:pb-6 border-b border-border last:border-0"
+        >
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full flex items-center justify-center font-bold text-base sm:text-lg flex-shrink-0">
+            {item.step}
+          </div>
+
+          <div className="flex-grow">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 sm:mb-2">
+              {item.title}
+            </h3>
+            <p className="text-sm sm:text-base text-secondary leading-relaxed">
+              {item.desc}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
-      {/* Requirements */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Shop Act Registration Process</h2>
-          <div className="space-y-6">
-            {[
-              { step: 1, title: 'Pre-Registration Consultation', desc: 'We review your business location and type to determine Shop Act applicability.' },
-              { step: 2, title: 'Documentation', desc: 'Gather PAN, Aadhar, property papers, and shop details.' },
-              { step: 3, title: 'Municipal Application', desc: 'Submit application to your municipal corporation with all required documents.' },
-              { step: 4, title: 'Inspection', desc: 'Municipal inspector verifies your shop premises and conditions.' },
-              { step: 5, title: 'License Issuance', desc: 'Receive your Shop Act license certificate within 1-2 weeks.' },
-            ].map((item) => (
-              <div key={item.step} className="flex gap-6 pb-6 border-b border-border last:border-0">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 text-lg">
-                  {item.step}
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-secondary text-base leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* Benefits */}
+<section className="py-16 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 sm:mb-10 lg:mb-12">
+      Benefits of Shop Act Registration
+    </h2>
 
-      {/* Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Benefits of Shop Act Registration</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">Legal & Compliance Benefits</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Legal operation without penalties</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Employee protection compliance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Working hours and wages regulation</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">Business Benefits</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Better credibility with suppliers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Easier access to business loans</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Professional business registration</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7 lg:gap-8">
+      <div className="bg-white rounded-xl p-6 sm:p-7 lg:p-8 border border-border">
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Legal & Compliance Benefits
+        </h3>
+        <ul className="space-y-2 sm:space-y-3 text-secondary">
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Legal operation without penalties</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Employee protection compliance</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Working hours and wages regulation</span>
+          </li>
+        </ul>
+      </div>
 
-      {/* FAQ */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Frequently Asked Questions</h2>
-          <FAQAccordion items={SHOP_ACT_FAQ} />
-        </div>
-      </section>
+      <div className="bg-white rounded-xl p-6 sm:p-7 lg:p-8 border border-border">
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Business Benefits
+        </h3>
+        <ul className="space-y-2 sm:space-y-3 text-secondary">
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Better credibility with suppliers</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Easier access to business loans</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Professional business registration</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* CTA */}
-      <CTASection
-        title="Get Your Shop Act License Today"
-        subtitle="Ensure legal compliance for your retail shop or commercial establishment. Apply for Shop Act registration now."
-        primaryCta={{ text: 'Start Application', href: '/contact' }}
-      />
+{/* FAQ */}
+<section className="py-16 sm:py-18 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12 sm:mb-14 lg:mb-16">
+      Frequently Asked Questions
+    </h2>
+    <FAQAccordion items={SHOP_ACT_FAQ} />
+  </div>
+</section>
+
+{/* CTA */}
+<CTASection
+  title="Get Your Shop Act License Today"
+  subtitle="Ensure legal compliance for your retail shop or commercial establishment. Apply for Shop Act registration now."
+  primaryCta={{ text: 'Start Application', href: '/contact' }}
+/>
     </MainLayout>
     </>
   )

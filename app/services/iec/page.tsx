@@ -103,73 +103,89 @@ export default function IECPage() {
         secondaryCta={{ text: 'Understand IEC Process', href: '/contact' }}
         backgroundGradient
       />
+{/* Overview */}
+<section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-background">
+  <div className="max-w-4xl mx-auto">
+    <p className="text-base sm:text-lg text-secondary text-center mb-8 leading-relaxed">
+      An Import Export Code (IEC) is a mandatory business identification
+      number required for importing or exporting goods and services from
+      India. Our experts simplify the complete DGFT registration process,
+      ensuring quick approval and hassle-free documentation.
+    </p>
+  </div>
+</section>
 
-      {/* What is IEC */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-6">What is IEC?</h2>
-          <p className="text-lg text-secondary mb-6 leading-relaxed">
-            IEC (Import Export Code) is a unique 10-digit identification number issued by the Directorate General of Foreign Trade (DGFT). 
-            This code is mandatory for any business involved in importing goods into India or exporting goods from India.
-          </p>
-          <p className="text-lg text-secondary leading-relaxed">
-            IEC is issued free of cost and is valid for lifetime. It's required for customs clearance, international shipping, and all 
-            export-import related documentation. We help businesses quickly obtain IEC and start international trade.
-          </p>
-        </div>
-      </section>
+{/* Who Needs IEC */}
+<section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-6">
+      Who Needs an IEC?
+    </h2>
 
-      {/* Who Needs IEC */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Who Needs IEC?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">Exporters</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Manufacturers exporting goods</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Trading businesses</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>E-commerce exporters</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Service exporters</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">Importers</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Raw material importers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Retailers importing goods</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>E-commerce importers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Capital goods importers</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    <p className="text-base sm:text-lg text-secondary text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+      Any business or individual involved in international trade should
+      obtain an IEC before importing or exporting goods and services.
+    </p>
 
+    <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-border hover:shadow-lg hover:shadow-blue-100/50 hover:border-accent transition-smooth">
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
+          Exporters
+        </h3>
+
+        <ul className="space-y-4">
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Manufacturers exporting products overseas.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Merchant exporters and trading businesses.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>E-commerce businesses selling internationally.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Service providers receiving foreign payments.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-border hover:shadow-lg hover:shadow-blue-100/50 hover:border-accent transition-smooth">
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
+          Importers
+        </h3>
+
+        <ul className="space-y-4">
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Businesses importing raw materials.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Retailers sourcing products globally.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>E-commerce import businesses.</span>
+          </li>
+
+          <li className="flex gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+            <span>Companies importing machinery and equipment.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -211,20 +227,27 @@ export default function IECPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Frequently Asked Questions</h2>
-          <FAQAccordion items={IEC_FAQ} />
-        </div>
-      </section>
+  
+{/* FAQ */}
+<section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-background">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-12">
+      Frequently Asked Questions
+    </h2>
 
-      {/* CTA */}
-      <CTASection
-        title="Start Your International Trade Journey"
-        subtitle="Get your IEC code and begin importing or exporting legally. Our experts handle all documentation and DGFT coordination."
-        primaryCta={{ text: 'Apply for IEC Now', href: '/contact' }}
-      />
+    <FAQAccordion items={IEC_FAQ} />
+  </div>
+</section>
+
+{/* CTA */}
+<CTASection
+  title="Get Your Import Export Code Today"
+  subtitle="Expand your business globally with a hassle-free IEC registration. Our experts manage the complete DGFT application process from start to finish."
+  primaryCta={{
+    text: "Apply for IEC",
+    href: "/contact",
+  }}
+/>
     </MainLayout>
     </>
   )
