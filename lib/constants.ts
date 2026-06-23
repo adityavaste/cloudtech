@@ -41,14 +41,14 @@ export const WHY_CHOOSE_US = [
 ]
 
 export const BUSINESS_SERVICES = [
-  { title: 'Shop Act Registration', description: 'Legal registration for retail and shop businesses.' },
-  { title: 'Udyam Registration', description: 'MSME registration for small business benefits and subsidies.' },
-  { title: 'FSSAI License', description: 'Food business safety and compliance certification.' },
-  { title: 'GST Registration', description: 'Goods and Services Tax registration and compliance.' },
-  { title: 'IEC Code', description: 'Import-Export Code for international business operations.' },
-  { title: 'Trade License', description: 'Municipal trade license for local business operations.' },
-  { title: 'Professional Tax', description: 'Professional tax registration for service providers.' },
-  { title: 'DSC Certificate', description: 'Digital Signature Certificate for online transactions.' },
+  { title: 'Shop Act Registration', description: 'Legal registration for retail and shop businesses.',link: "/services/shop-act", },
+  { title: 'Udyam Registration', description: 'MSME registration for small business benefits and subsidies.',link: "/services/udyam", },
+  { title: 'FSSAI License', description: 'Food business safety and compliance certification.' ,link: "/services/fssai",},
+  { title: 'GST Registration', description: 'Goods and Services Tax registration and compliance.',link: "/services/gst", },
+  { title: 'IEC Code', description: 'Import-Export Code for international business operations.',link: "/services/iec", },
+  { title: 'Trade License', description: 'Municipal trade license for local business operations.' ,link: "/services/trade-license",},
+  { title: 'Professional Tax', description: 'Professional tax registration for service providers.',link: "/services/professional-tax", },
+  { title: 'DSC Certificate', description: 'Digital Signature Certificate for online transactions.' ,link: "/services/dsc",},
   { title: 'Annual Compliance', description: 'Annual filing and regulatory compliance management.' },
   { title: 'License Renewal', description: 'Hassle-free license and permit renewal services.' },
 ]
