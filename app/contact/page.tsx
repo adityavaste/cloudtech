@@ -194,7 +194,7 @@ export default function ContactPage() {
               We offer free 30-minute consultations to discuss your business needs and how we can help.
             </p>
             <a
-              href="https://calendly.com/businesssolutions"
+              href="https://wa.me/917350247244?text=Hi!%20%F0%9F%91%8B%20I%20would%20like%20to%20start%20my%20business%20journey%20and%20I'm%20interested%20in%20your%20business%20registration%20services.%20Please%20guide%20me%20through%20the%20process."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-blue-700 transition-smooth font-semibold"
