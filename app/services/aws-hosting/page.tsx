@@ -192,180 +192,202 @@ export default function AWSHostingPage() {
         />
 
         {/* What is AWS */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-balance">
-              What is AWS?
-            </h2>
-            <p className="text-lg text-muted-foreground text-center mb-6">
-              AWS is Amazon&apos;s cloud platform used by millions of
-              businesses, from startups to Fortune 500 companies. Instead of
-              buying expensive servers, you rent computing power on demand.
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-background">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-5 sm:mb-6 text-balance">
+      What is AWS?
+    </h2>
+
+    <p className="text-base sm:text-lg text-muted-foreground text-center leading-7 sm:leading-8 mb-5 sm:mb-6">
+      AWS is Amazon&apos;s cloud platform used by millions of
+      businesses, from startups to Fortune 500 companies. Instead of
+      buying expensive servers, you rent computing power on demand.
+    </p>
+
+    <p className="text-base sm:text-lg text-muted-foreground text-center leading-7 sm:leading-8">
+      Think of it like electricity - you only pay for what you use. When
+      your website gets more visitors, AWS automatically provides more
+      resources. When traffic decreases, you pay less.
+    </p>
+  </div>
+</section>
+
+{/* AWS Services Explained */}
+<div className="px-5 sm:px-6 lg:px-8">
+  <FeatureGrid
+    title="Core AWS Services We Use"
+    subtitle="Simple explanations of the AWS services powering your business"
+    features={servicesFeatures}
+    columns={3}
+  />
+</div>
+
+{/* Why AWS */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 gradient-subtle">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 text-balance">
+      Why Choose AWS?
+    </h2>
+
+    <p className="text-center text-base sm:text-lg text-muted-foreground leading-7 sm:leading-8 mb-10 sm:mb-12 max-w-3xl mx-auto">
+      AWS is the #1 choice for businesses of all sizes because it&apos;s
+      reliable, secure, and affordable.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {benefitsFeatures.map((benefit, i) => (
+        <div
+          key={i}
+          className="bg-card border border-border rounded-lg p-5 sm:p-6 hover:border-primary transition-smooth"
+        >
+          <div className="mb-4">{benefit.icon}</div>
+
+          <h3 className="text-lg font-semibold text-foreground mb-2">
+            {benefit.title}
+          </h3>
+
+          <p className="text-sm sm:text-base text-muted-foreground leading-6">
+            {benefit.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>{/* AWS vs Traditional Hosting */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-card">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 sm:mb-12 text-balance">
+      AWS vs Traditional Hosting
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      <div>
+        <h3 className="text-lg sm:text-xl font-semibold mb-5 text-red-600">
+          Traditional Hosting Issues
+        </h3>
+
+        <ul className="space-y-4">
+          {[
+            "Fixed resources - can't scale quickly",
+            "Website crashes during traffic spikes",
+            "Slow performance during peak hours",
+            "Limited security features",
+            "Difficult migrations and upgrades",
+            "Long-term contracts and commitments",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className="text-red-600 mt-0.5">✗</span>
+              <span className="text-sm sm:text-base text-muted-foreground leading-6">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-lg sm:text-xl font-semibold mb-5 text-green-600">
+          AWS Advantages
+        </h3>
+
+        <ul className="space-y-4">
+          {[
+            "Auto-scaling - resources grow with demand",
+            "Never goes down from traffic",
+            "Lightning-fast performance always",
+            "Enterprise-grade security included",
+            "Easy migrations and upgrades",
+            "Pay only for what you use",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className="text-green-600 mt-0.5">✓</span>
+              <span className="text-sm sm:text-base text-foreground leading-6">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Our AWS Setup */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-background">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 sm:mb-12 text-balance">
+      How We Set Up AWS For You
+    </h2>
+
+    <div className="space-y-6">
+      {[
+        {
+          title: "Assessment",
+          desc: "We analyze your application needs to design the optimal AWS architecture.",
+        },
+        {
+          title: "Setup",
+          desc: "Configure servers, databases, storage, and security with best practices.",
+        },
+        {
+          title: "Migration",
+          desc: "Move your website to AWS with zero downtime.",
+        },
+        {
+          title: "Optimization",
+          desc: "Fine-tune performance and costs for your specific needs.",
+        },
+        {
+          title: "Monitoring",
+          desc: "Continuous monitoring with 24/7 alerts and support.",
+        },
+      ].map((step, i) => (
+        <div
+          key={i}
+          className="flex flex-col sm:flex-row gap-4 pb-6 border-b border-border last:border-0"
+        >
+          <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+            {i + 1}
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              {step.title}
+            </h3>
+
+            <p className="text-sm sm:text-base text-muted-foreground leading-7">
+              {step.desc}
             </p>
-            <p className="text-lg text-muted-foreground text-center">
-              Think of it like electricity - you only pay for what you use. When
-              your website gets more visitors, AWS automatically provides more
-              resources. When traffic decreases, you pay less.
-            </p>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-        {/* AWS Services Explained */}
-        <FeatureGrid
-          title="Core AWS Services We Use"
-          subtitle="Simple explanations of the AWS services powering your business"
-          features={servicesFeatures}
-          columns={3}
-        />
+{/* FAQ */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 gradient-subtle">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 sm:mb-12 text-balance">
+      AWS Hosting FAQ
+    </h2>
 
-        {/* Why AWS */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 gradient-subtle">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-balance">
-              Why Choose AWS?
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              AWS is the #1 choice for businesses of all sizes because it&apos;s
-              reliable, secure, and affordable.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefitsFeatures.map((benefit, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-smooth"
-                >
-                  <div className="mb-4">{benefit.icon}</div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    <FAQAccordion items={AWS_FAQ} />
+  </div>
+</section>
 
-        {/* AWS vs Traditional Hosting */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-balance">
-              AWS vs Traditional Hosting
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-red-600">
-                  Traditional Hosting Issues
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "Fixed resources - can't scale quickly",
-                    "Website crashes during traffic spikes",
-                    "Slow performance during peak hours",
-                    "Limited security features",
-                    "Difficult migrations and upgrades",
-                    "Long-term contracts and commitments",
-                  ].map((item, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-red-600">✗</span>
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-green-600">
-                  AWS Advantages
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "Auto-scaling - resources grow with demand",
-                    "Never goes down from traffic",
-                    "Lightning-fast performance always",
-                    "Enterprise-grade security included",
-                    "Easy migrations and upgrades",
-                    "Pay only for what you use",
-                  ].map((item, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-green-600">✓</span>
-                      <span className="text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our AWS Setup */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-balance">
-              How We Set Up AWS For You
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Assessment",
-                  desc: "We analyze your application needs to design the optimal AWS architecture.",
-                },
-                {
-                  title: "Setup",
-                  desc: "Configure servers, databases, storage, and security with best practices.",
-                },
-                {
-                  title: "Migration",
-                  desc: "Move your website to AWS with zero downtime.",
-                },
-                {
-                  title: "Optimization",
-                  desc: "Fine-tune performance and costs for your specific needs.",
-                },
-                {
-                  title: "Monitoring",
-                  desc: "Continuous monitoring with 24/7 alerts and support.",
-                },
-              ].map((step, i) => (
-                <div
-                  key={i}
-                  className="flex gap-4 pb-6 border-b border-border last:border-0"
-                >
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
-                    {i + 1}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 gradient-subtle">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-balance">
-              AWS Hosting FAQ
-            </h2>
-            <FAQAccordion items={AWS_FAQ} />
-          </div>
-        </section>
-
-        {/* CTA */}
-        <CTASection
-          title="Ready to Move to AWS?"
-          subtitle="Let us handle the technical details. Get enterprise-grade hosting at a fraction of the cost."
-          primaryCta={{
-            text: "Talk to Our Technical Team",
-            href: "https://docs.google.com/forms/d/e/1FAIpQLSeuC3NADjP4kI5kpny984oVgqlD91-teQBfhfiCTB8wwSrnmw/viewform?usp=publish-editor",
-           external: true,
-          }}
-        />
+{/* CTA */}
+<div className="px-5 sm:px-6 lg:px-8">
+  <CTASection
+    title="Ready to Move to AWS?"
+    subtitle="Let us handle the technical details. Get enterprise-grade hosting at a fraction of the cost."
+    primaryCta={{
+      text: "Talk to Our Technical Team",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSeuC3NADjP4kI5kpny984oVgqlD91-teQBfhfiCTB8wwSrnmw/viewform?usp=publish-editor",
+      external: true,
+    }}
+  />
+</div>
       </MainLayout>
     </>
   );

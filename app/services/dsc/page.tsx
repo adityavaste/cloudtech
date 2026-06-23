@@ -116,164 +116,259 @@ export default function DSCPage() {
         secondaryCta={{ text: 'Choose DSC Type', href: '/contact' }}
         backgroundGradient
       />
+{/* What is DSC */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
+      What is Digital Signature Certificate (DSC)?
+    </h2>
 
-      {/* What is DSC */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-6">What is Digital Signature Certificate (DSC)?</h2>
-          <p className="text-lg text-secondary mb-6 leading-relaxed">
-            A Digital Signature Certificate (DSC) is a digital credential that authenticates electronic documents and transactions. 
-            It is the digital equivalent of a handwritten signature and has legal validity under the Information Technology Act, 2000.
+    <p className="text-base sm:text-lg text-secondary leading-7 sm:leading-8 mb-6">
+      A Digital Signature Certificate (DSC) is a digital credential that
+      authenticates electronic documents and transactions. It is the digital
+      equivalent of a handwritten signature and has legal validity under the
+      Information Technology Act, 2000.
+    </p>
+
+    <p className="text-base sm:text-lg text-secondary leading-7 sm:leading-8">
+      DSC is issued by Certifying Authorities (CAs) and contains cryptographic
+      information that proves the identity and authenticity of the signer. It is
+      used for online transactions with government portals, filing returns, and
+      signing digital documents.
+    </p>
+  </div>
+</section>
+
+{/* DSC Types */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-10 sm:mb-12">
+      Types of Digital Signature Certificates
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {DSC_TYPES.map((type, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-xl p-6 sm:p-8 border border-border hover:shadow-lg hover:shadow-blue-100/50 hover:border-accent transition-smooth"
+        >
+          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">
+            {type.title}
+          </h3>
+
+          <p className="text-secondary text-sm sm:text-base leading-6 mb-6">
+            {type.description}
           </p>
-          <p className="text-lg text-secondary leading-relaxed">
-            DSC is issued by Certifying Authorities (CAs) and contains cryptographic information that proves the identity and authenticity 
-            of the signer. It is used for online transactions with government portals, filing returns, and signing digital documents.
-          </p>
-        </div>
-      </section>
 
-      {/* DSC Types */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Types of Digital Signature Certificates</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {DSC_TYPES.map((type, i) => (
-              <div key={i} className="bg-white rounded-xl p-8 border border-border hover:shadow-lg hover:shadow-blue-100/50 hover:border-accent transition-smooth">
-                <h3 className="text-xl font-bold text-foreground mb-3">{type.title}</h3>
-                <p className="text-secondary mb-6 text-base">{type.description}</p>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Uses:</p>
-                    <p className="text-secondary text-sm">{type.uses}</p>
-                  </div>
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-lg font-bold text-primary">{type.cost}</p>
-                    <p className="text-secondary text-sm">2-year validity</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Uses of DSC */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Uses of Digital Signature Certificate</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-section-light rounded-xl p-8 border border-border">
-              <FileText className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-6">Government Transactions</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>GST e-invoicing and filing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Income Tax Return filing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>MCA (Company) filings</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Ministry tender participation</span>
-                </li>
-              </ul>
+          <div className="space-y-4">
+            <div>
+              <p className="text-sm font-semibold text-foreground mb-2">
+                Uses:
+              </p>
+              <p className="text-secondary text-sm leading-6">
+                {type.uses}
+              </p>
             </div>
-            <div className="bg-section-light rounded-xl p-8 border border-border">
-              <Lock className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-6">Business Benefits</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Secure document signing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Legal validity of documents</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Non-repudiation of transactions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Compliance with regulations</span>
-                </li>
-              </ul>
+
+            <div className="pt-4 border-t border-border">
+              <p className="text-xl font-bold text-primary">{type.cost}</p>
+              <p className="text-secondary text-sm">2-year validity</p>
             </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
-      {/* Requirements & Process */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">DSC Application Process</h2>
-          <div className="space-y-6">
-            {[
-              { step: 1, title: 'Document Preparation', desc: 'Gather PAN, Aadhar, and business verification documents.' },
-              { step: 2, title: 'Certifying Authority Selection', desc: 'We help select the appropriate Certifying Authority based on your needs.' },
-              { step: 3, title: 'Online Application', desc: 'Submit DSC application with complete documentation.' },
-              { step: 4, title: 'Identity Verification', desc: 'CA verifies your identity through video call or in-person.' },
-              { step: 5, title: 'DSC Issuance', desc: 'Receive your Digital Signature Certificate within 1-3 days.' },
-            ].map((item) => (
-              <div key={item.step} className="flex gap-6 pb-6 border-b border-border last:border-0">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 text-lg">
-                  {item.step}
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-secondary text-base leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+{/* Uses of DSC */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-10 sm:mb-12">
+      Uses of Digital Signature Certificate
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+      <div className="bg-section-light rounded-xl p-6 sm:p-8 border border-border">
+        <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-xl font-bold text-foreground mb-6">
+          Government Transactions
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          {[
+            "GST e-invoicing and filing",
+            "Income Tax Return filing",
+            "MCA (Company) filings",
+            "Ministry tender participation",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <span className="text-sm sm:text-base">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="bg-section-light rounded-xl p-6 sm:p-8 border border-border">
+        <Lock className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-xl font-bold text-foreground mb-6">
+          Business Benefits
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          {[
+            "Secure document signing",
+            "Legal validity of documents",
+            "Non-repudiation of transactions",
+            "Compliance with regulations",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <span className="text-sm sm:text-base">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Requirements & Process */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-10 sm:mb-12">
+      DSC Application Process
+    </h2>
+
+    <div className="space-y-6">
+      {[
+        {
+          step: 1,
+          title: "Document Preparation",
+          desc: "Gather PAN, Aadhar, and business verification documents.",
+        },
+        {
+          step: 2,
+          title: "Certifying Authority Selection",
+          desc: "We help select the appropriate Certifying Authority based on your needs.",
+        },
+        {
+          step: 3,
+          title: "Online Application",
+          desc: "Submit DSC application with complete documentation.",
+        },
+        {
+          step: 4,
+          title: "Identity Verification",
+          desc: "CA verifies your identity through video call or in-person.",
+        },
+        {
+          step: 5,
+          title: "DSC Issuance",
+          desc: "Receive your Digital Signature Certificate within 1-3 days.",
+        },
+      ].map((item) => (
+        <div
+          key={item.step}
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 pb-6 border-b border-border last:border-0"
+        >
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 text-base sm:text-lg">
+            {item.step}
+          </div>
+
+          <div className="flex-grow">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
+              {item.title}
+            </h3>
+
+            <p className="text-secondary text-sm sm:text-base leading-7">
+              {item.desc}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
-      {/* Quick Info */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-blue-light">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl p-8 border border-border text-center">
-            <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">Processing Time</h3>
-            <p className="text-4xl font-bold text-primary mb-2">1-3 Days</p>
-            <p className="text-secondary">Quick online issuance</p>
-          </div>
-          <div className="bg-white rounded-xl p-8 border border-border text-center">
-            <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">Validity Period</h3>
-            <p className="text-4xl font-bold text-primary mb-2">2 Years</p>
-            <p className="text-secondary">Valid for all transactions</p>
-          </div>
-          <div className="bg-white rounded-xl p-8 border border-border text-center">
-            <Lock className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">Security</h3>
-            <p className="text-4xl font-bold text-primary mb-2">256-bit</p>
-            <p className="text-secondary">Government standard encryption</p>
-          </div>
-        </div>
-      </section>
+{/* Quick Info */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-gradient-blue-light">
+  <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div className="bg-white rounded-xl p-6 sm:p-8 border border-border text-center">
+      <Clock className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4" />
 
-      {/* FAQ */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Frequently Asked Questions</h2>
-          <FAQAccordion items={DSC_FAQ} />
-        </div>
-      </section>
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+        Processing Time
+      </h3>
 
-      {/* CTA */}
-      <CTASection
-        title="Get Your Digital Signature Certificate Today"
-        subtitle="Secure your digital transactions with a government-recognized Digital Signature Certificate. Quick processing, trusted security."
-        primaryCta={{ text: 'Apply for DSC', href: '/contact' }}
-      />
+      <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+        1-3 Days
+      </p>
+
+      <p className="text-sm sm:text-base text-secondary">
+        Quick online issuance
+      </p>
+    </div>
+
+    <div className="bg-white rounded-xl p-6 sm:p-8 border border-border text-center">
+      <Smartphone className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4" />
+
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+        Validity Period
+      </h3>
+
+      <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+        2 Years
+      </p>
+
+      <p className="text-sm sm:text-base text-secondary">
+        Valid for all transactions
+      </p>
+    </div>
+
+    <div className="bg-white rounded-xl p-6 sm:p-8 border border-border text-center">
+      <Lock className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4" />
+
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+        Security
+      </h3>
+
+      <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+        256-bit
+      </p>
+
+      <p className="text-sm sm:text-base text-secondary">
+        Government standard encryption
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* FAQ */}
+<section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-foreground mb-10 sm:mb-12">
+      Frequently Asked Questions
+    </h2>
+
+    <FAQAccordion items={DSC_FAQ} />
+  </div>
+</section>
+
+{/* CTA */}
+<div className="px-5 sm:px-6 lg:px-8">
+  <CTASection
+    title="Get Your Digital Signature Certificate Today"
+    subtitle="Secure your digital transactions with a government-recognized Digital Signature Certificate. Quick processing, trusted security."
+    primaryCta={{
+      text: "Apply for DSC",
+      href: "/contact",
+    }}
+  />
+</div>
     </MainLayout>
     </>
   )
