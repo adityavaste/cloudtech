@@ -85,134 +85,215 @@ export default function ProfessionalTaxPage() {
       />
 
       {/* What is Professional Tax */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-6">What is Professional Tax?</h2>
-          <p className="text-lg text-secondary mb-6 leading-relaxed">
-            Professional Tax is a state-level tax collected by employers from their employees' salaries. It is a recurring tax that employers 
-            must deduct, collect, and remit to the state government monthly or quarterly.
-          </p>
-          <p className="text-lg text-secondary leading-relaxed">
-            This tax is applicable only in certain states and is levied on the wages/salaries paid to employees. The tax amount depends on 
-            the salary bracket and is usually paid by the employer on behalf of employees.
-          </p>
-        </div>
-      </section>
+     <section className="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
+      What is Professional Tax?
+    </h2>
+
+    <p className="text-base sm:text-lg text-secondary mb-5 sm:mb-6 leading-7 sm:leading-8">
+      Professional Tax is a state-level tax collected by employers from their employees' salaries. It is a recurring tax that employers
+      must deduct, collect, and remit to the state government monthly or quarterly.
+    </p>
+
+    <p className="text-base sm:text-lg text-secondary leading-7 sm:leading-8">
+      This tax is applicable only in certain states and is levied on the wages/salaries paid to employees. The tax amount depends on
+      the salary bracket and is usually paid by the employer on behalf of employees.
+    </p>
+  </div>
+</section>
 
       {/* Employer Responsibilities */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Employer Responsibilities</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: 'Registration', items: ['Register with state authority', 'Obtain registration certificate', 'Maintain registration details'] },
-              { title: 'Compliance', items: ['Deduct tax from employees', 'File monthly/quarterly returns', 'Maintain records and documents'] },
-              { title: 'Payments', items: ['Pay tax to government', 'Issue tax certificates', 'Maintain audit trail'] },
-              { title: 'Documentation', items: ['Maintain salary records', 'Keep tax payment proofs', 'Employee wage statements'] },
-            ].map((category, i) => (
-              <div key={i} className="bg-white rounded-xl p-8 border border-border">
-                <h3 className="text-xl font-bold text-foreground mb-6">{category.title}</h3>
-                <ul className="space-y-3 text-secondary">
-                  {category.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-8 sm:mb-12">
+      Employer Responsibilities
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+      {[
+        { title: 'Registration', items: ['Register with state authority', 'Obtain registration certificate', 'Maintain registration details'] },
+        { title: 'Compliance', items: ['Deduct tax from employees', 'File monthly/quarterly returns', 'Maintain records and documents'] },
+        { title: 'Payments', items: ['Pay tax to government', 'Issue tax certificates', 'Maintain audit trail'] },
+        { title: 'Documentation', items: ['Maintain salary records', 'Keep tax payment proofs', 'Employee wage statements'] },
+      ].map((category, i) => (
+        <div key={i} className="bg-white rounded-xl p-5 sm:p-8 border border-border">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+            {category.title}
+          </h3>
+
+          <ul className="space-y-3 text-secondary">
+            {category.items.map((item, j) => (
+              <li key={j} className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span className="text-sm sm:text-base">{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* State Requirements */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Professional Tax by State</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-xl border border-border overflow-hidden">
-              <thead className="bg-gradient-to-r from-primary to-secondary text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left font-bold">State</th>
-                  <th className="px-6 py-4 text-left font-bold">Tax Name</th>
-                  <th className="px-6 py-4 text-left font-bold">Rate</th>
-                  <th className="px-6 py-4 text-left font-bold">Who Pays</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { state: 'Maharashtra', name: 'Professional Tax', rate: '0-1% of salary', pays: 'Employer' },
-                  { state: 'Karnataka', name: 'Professional Tax', rate: 'Up to ₹12/month', pays: 'Employee' },
-                  { state: 'Andhra Pradesh', name: 'Professional Tax', rate: 'Varies', pays: 'Employee' },
-                  { state: 'Telangana', name: 'Professional Tax', rate: 'Varies', pays: 'Employee' },
-                ].map((row, i) => (
-                  <tr key={i} className={i !== 3 ? 'border-b border-border' : ''}>
-                    <td className="px-6 py-4 font-semibold text-foreground">{row.state}</td>
-                    <td className="px-6 py-4 text-secondary">{row.name}</td>
-                    <td className="px-6 py-4 text-secondary">{row.rate}</td>
-                    <td className="px-6 py-4 text-secondary">{row.pays}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+     <section className="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-8 sm:mb-12">
+      Professional Tax by State
+    </h2>
+
+    <div className="overflow-x-auto rounded-xl">
+      <table className="min-w-[700px] w-full bg-white border border-border overflow-hidden rounded-xl">
+        <thead className="bg-gradient-to-r from-primary to-secondary text-white">
+          <tr>
+            <th className="px-4 sm:px-6 py-4 text-left font-bold">State</th>
+            <th className="px-4 sm:px-6 py-4 text-left font-bold">Tax Name</th>
+            <th className="px-4 sm:px-6 py-4 text-left font-bold">Rate</th>
+            <th className="px-4 sm:px-6 py-4 text-left font-bold">Who Pays</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {[
+            { state: 'Maharashtra', name: 'Professional Tax', rate: '0-1% of salary', pays: 'Employer' },
+            { state: 'Karnataka', name: 'Professional Tax', rate: 'Up to ₹12/month', pays: 'Employee' },
+            { state: 'Andhra Pradesh', name: 'Professional Tax', rate: 'Varies', pays: 'Employee' },
+            { state: 'Telangana', name: 'Professional Tax', rate: 'Varies', pays: 'Employee' },
+          ].map((row, i) => (
+            <tr key={i} className={i !== 3 ? 'border-b border-border' : ''}>
+              <td className="px-4 sm:px-6 py-4 font-semibold">{row.state}</td>
+              <td className="px-4 sm:px-6 py-4">{row.name}</td>
+              <td className="px-4 sm:px-6 py-4">{row.rate}</td>
+              <td className="px-4 sm:px-6 py-4">{row.pays}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
       {/* Our Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Our Professional Tax Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <Briefcase className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-6">Registration & Setup</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>State-specific registration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Obtain registration certificate</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Salary calculation guidance</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-8 border border-border">
-              <FileText className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-6">Ongoing Compliance</h3>
-              <ul className="space-y-3 text-secondary">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Monthly/quarterly filings</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Timely tax payments</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Record maintenance support</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section className="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-8 sm:mb-12">
+      Our Professional Tax Services
+    </h2>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+      <div className="bg-white rounded-xl p-5 sm:p-8 border border-border">
+        <Briefcase className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Registration & Setup
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">State-specific registration</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Obtain registration certificate</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Salary calculation guidance</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-5 sm:p-8 border border-border">
+        <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Ongoing Compliance
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Monthly/quarterly filings</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Timely tax payments</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Record maintenance support</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
       {/* FAQ */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Frequently Asked Questions</h2>
-          <FAQAccordion items={PROFESSIONAL_TAX_FAQ} />
-        </div>
-      </section>
+     <section className="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-section-alt">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-8 sm:mb-12">
+      Our Professional Tax Services
+    </h2>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+      <div className="bg-white rounded-xl p-5 sm:p-8 border border-border">
+        <Briefcase className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Registration & Setup
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">State-specific registration</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Obtain registration certificate</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Salary calculation guidance</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-xl p-5 sm:p-8 border border-border">
+        <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
+
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">
+          Ongoing Compliance
+        </h3>
+
+        <ul className="space-y-3 text-secondary">
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Monthly/quarterly filings</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Timely tax payments</span>
+          </li>
+
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span className="text-sm sm:text-base">Record maintenance support</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
       {/* CTA */}
       <CTASection
         title="Register Your Business for Professional Tax"

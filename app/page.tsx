@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import { MainLayout } from "@/components/layout/main-layout";
 import { Hero } from "@/components/sections/hero";
 import { FeatureGrid } from "@/components/sections/feature-grid";
@@ -127,7 +128,7 @@ export default function HomePage() {
         subtitle="AWS-powered professional website development, secure cloud hosting, GST registration, Shop Act, Udyam, IEC, MSME registration, and complete business compliance services for startups and small businesses."
         primaryCta={{
           text: "Book Free Consultation",
-          href: "https://wa.me/917350247244?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20consultation.%20Please%20guide%20me%20through%20the%20next%20steps.",
+          href: "https://wa.me/917350247244?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20consultation.%20Please%20guide%20me%20through%20the%20next%20steps.", external: true
         }}
         secondaryCta={{ text: "View Our Services", href: "/services" }}
         backgroundGradient
@@ -365,6 +366,7 @@ export default function HomePage() {
           href: "/contact",
         }}
       />
+
     </MainLayout>
   );
 }
