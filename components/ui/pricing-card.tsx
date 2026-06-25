@@ -9,6 +9,7 @@ interface PricingCardProps {
   features: string[]
   ctaText: string
   ctaHref: string
+  onSelectPlan?: () => void // ✨ New prop to handle modal triggers
   isRecommended?: boolean
 }
 
@@ -20,8 +21,17 @@ export function PricingCard({
   features,
   ctaText,
   ctaHref,
+  onSelectPlan, // ✨ Destructure the new prop
   isRecommended = false,
 }: PricingCardProps) {
+  
+  // Shared styles for both Link and Button to preserve your exact design
+  const ctaClasses = `text-center px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-xl font-bold mb-6 sm:mb-8 transition-smooth text-sm sm:text-base ${
+    isRecommended
+      ? 'btn-gradient-primary shadow-lg w-full'
+      : 'border-2 border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg w-full'
+  }`
+
   return (
     <div
       className={`rounded-xl border transition-smooth flex flex-col h-full ${
@@ -37,7 +47,6 @@ export function PricingCard({
       )}
 
       <div className="p-6 sm:p-7 lg:p-8 flex-grow flex flex-col">
-
         <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">
           {name}
         </h3>
@@ -55,19 +64,18 @@ export function PricingCard({
           </span>
         </div>
 
-        <Link
-          href={ctaHref}
-          className={`text-center px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-xl font-bold mb-6 sm:mb-8 transition-smooth text-sm sm:text-base ${
-            isRecommended
-              ? 'btn-gradient-primary shadow-lg'
-              : 'border-2 border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg'
-          }`}
-        >
-          {ctaText}
-        </Link>
+        {/* ✨ Conditional Rendering: If onSelectPlan is passed, use a button for the modal */}
+        {onSelectPlan ? (
+          <button onClick={onSelectPlan} className={ctaClasses}>
+            {ctaText}
+          </button>
+        ) : (
+          <Link href={ctaHref} className={ctaClasses}>
+            {ctaText}
+          </Link>
+        )}
 
         <div className="space-y-3 sm:space-y-4 flex-grow">
-
           <p className="font-bold text-foreground text-xs sm:text-sm uppercase tracking-wide">
             What's Included:
           </p>
@@ -81,7 +89,6 @@ export function PricingCard({
             </div>
           ))}
         </div>
-
       </div>
     </div>
   )

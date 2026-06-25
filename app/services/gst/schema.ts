@@ -2,7 +2,7 @@ export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
 
-  "@id": "https://cloudtech.host.com/services/gst-registration/#service",
+  "@id": "https://cloudtech.host/services/gst/#service",
 
   name: "GST Registration",
 
@@ -12,7 +12,7 @@ export const serviceSchema = {
     "Professional GST Registration services for businesses across India.",
 
   provider: {
-    "@id": "https://cloudtech.host.com/#organization",
+    "@id": "https://cloudtech.host/#organization",
   },
 
   areaServed: {
@@ -20,16 +20,16 @@ export const serviceSchema = {
     name: "India",
   },
 
-  url: "https://cloudtech.host.com/services/gst-registration",
+  url: "https://cloudtech.host/services/gst",
 };
 
 export const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
 
-  "@id": "https://cloudtech.host.com/services/gst-registration/#webpage",
+  "@id": "https://cloudtech.host/services/gst/#webpage",
 
-  url: "https://cloudtech.host.com/services/gst-registration",
+  url: "https://cloudtech.host/services/gst",
 
   name: "GST Registration",
 
@@ -41,7 +41,7 @@ export const webpageSchema = {
   },
 
   about: {
-    "@id": "https://cloudtech.hostcom/services/gst-registration/#service",
+    "@id": "https://cloudtech.hostcom/services/gst/#service",
   },
 };
 
@@ -54,19 +54,19 @@ export const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://cloudtech.host.com",
+      item: "https://cloudtech.host",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://cloudtech.host.com/services",
+      item: "https://cloudtech.host/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "GST Registration",
-      item: "https://cloudtech.host.com/services/gst-registration",
+      item: "https://cloudtech.host/services/gst",
     },
   ],
 };
