@@ -202,6 +202,13 @@ export function Navbar() {
               Blog
             </Link>
 
+            <Link
+              href="/contact"
+              className="block px-4 py-3 rounded-lg hover:bg-blue-50 font-medium"
+            >
+              Contact
+            </Link>
+
          
           </div>
         )}
