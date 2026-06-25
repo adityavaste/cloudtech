@@ -182,13 +182,17 @@ export default function PricingPage() {
 
       {/* CTA */}
       <CTASection
-        title="Ready to Grow Your Business?"
-        subtitle="Choose the perfect plan today and launch with confidence."
-        primaryCta={{
-          text: "Get Started",
-          href: "/pricing?plan=Growth", // ✨ Updated link
-        }}
-      />
+  title="Ready to Launch Your Business?"
+  subtitle="Get a free consultation from our team today and start your journey to success."
+  primaryCta={{
+    text: "Book Free Consultation",
+    href: `https://wa.me/917350247244?text=${encodeURIComponent(
+      "Hi! 👋 I would like to start my business journey and I'm interested in your business registration services. Please guide me through the process."
+    )}`,
+    external: true,
+   
+  }}
+/>
 
       {/* Modal renders over the page when a plan is clicked */}
       {selectedPlan && (

@@ -136,10 +136,17 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <CTASection
-        title="Ready to Get Started?"
-        subtitle="Contact us today for a free consultation and learn how we can help grow your business."
-        primaryCta={{ text: 'Schedule Consultation', href: '/contact' }}
-      />
+  title="Ready to Launch Your Business?"
+  subtitle="Get a free consultation from our team today and start your journey to success."
+  primaryCta={{
+    text: "Book Free Consultation",
+    href: `https://wa.me/917350247244?text=${encodeURIComponent(
+      "Hi! 👋 I would like to start my business journey and I'm interested in your business registration services. Please guide me through the process."
+    )}`,
+    external: true,
+    
+  }}
+/>
     </MainLayout>
   )
 }
