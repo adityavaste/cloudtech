@@ -108,7 +108,7 @@ export const PRICING_PLANS = [
       'Email support',
     ],
     ctaText: 'Get Started',
-    ctaHref: '/',
+    ctaHref: '/pricing?plan=Starter',
     isRecommended: false,
   },
   {
@@ -125,7 +125,7 @@ export const PRICING_PLANS = [
       'Basic SEO optimization',
     ],
     ctaText: 'Get Started',
-    ctaHref: '/contact',
+    ctaHref: '/pricing?plan=Growth',
     isRecommended: true,
   },
   {
@@ -142,7 +142,7 @@ export const PRICING_PLANS = [
       'Advanced SEO & marketing',
     ],
     ctaText: 'Contact Sales',
-    ctaHref: '/contact',
+    ctaHref: '/pricing?plan=Enterprise',
     isRecommended: false,
   },
 ]
