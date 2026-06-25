@@ -10,6 +10,9 @@ import { Hero } from '@/components/sections/hero'
 import { FormEvent, useState } from 'react'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 
+// Paste your Google Web App URL here (Or use process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL)
+const contactpageurl  = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -19,16 +22,37 @@ export default function ContactPage() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' })
-    }, 5000)
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch(contactpageurl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8', // Prevents CORS preflight blocks
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+        
+        setTimeout(() => {
+          setSubmitted(false)
+        }, 5000)
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      alert("Failed to submit form. Check your internet connection.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -122,7 +146,8 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    disabled={isSubmitting}
+                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                   />
                   <input
                     type="email"
@@ -131,7 +156,8 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    disabled={isSubmitting}
+                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                   />
                 </div>
 
@@ -142,14 +168,16 @@ export default function ContactPage() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    disabled={isSubmitting}
+                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                   />
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    disabled={isSubmitting}
+                    className="px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                   >
                     <option value="">Select Service</option>
                     <option value="website">Website Development</option>
@@ -168,7 +196,8 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                 ></textarea>
 
                 {submitted ? (
@@ -178,9 +207,10 @@ export default function ContactPage() {
                 ) : (
                   <button
                     type="submit"
-                    className="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:bg-blue-700 transition-smooth font-semibold"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:bg-blue-700 transition-smooth font-semibold disabled:bg-slate-400"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
                 )}
               </form>
