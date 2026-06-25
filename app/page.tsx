@@ -34,7 +34,7 @@ import {
   Headphones,
 } from "lucide-react";
 import Link from "next/link";
-const businessServicesFeatures = BUSINESS_SERVICES.map(service => ({
+const businessServicesFeatures = BUSINESS_SERVICES.map((service) => ({
   title: service.title,
   description: service.description,
   link: service.link,
@@ -105,14 +105,14 @@ export default function HomePage() {
     description: item.description,
   }));
 
- const businessServicesFeatures = BUSINESS_SERVICES.slice(0, 6).map(
-  (item) => ({
-    icon: <Briefcase className="w-6 h-6 text-primary" />,
-    title: item.title,
-    description: item.description,
-    link: item.link,
-  }),
-);
+  const businessServicesFeatures = BUSINESS_SERVICES.slice(0, 6).map(
+    (item) => ({
+      icon: <Briefcase className="w-6 h-6 text-primary" />,
+      title: item.title,
+      description: item.description,
+      link: item.link,
+    }),
+  );
 
   const awsFeatures = AWS_BENEFITS.map((item) => ({
     icon: <Cloud className="w-6 h-6 text-primary" />,
@@ -128,7 +128,8 @@ export default function HomePage() {
         subtitle="AWS-powered professional website development, secure cloud hosting, GST registration, Shop Act, Udyam, IEC, MSME registration, and complete business compliance services for startups and small businesses."
         primaryCta={{
           text: "Book Free Consultation",
-          href: "https://wa.me/917350247244?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20consultation.%20Please%20guide%20me%20through%20the%20next%20steps.", external: true
+          href: "https://wa.me/917350247244?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20consultation.%20Please%20guide%20me%20through%20the%20next%20steps.",
+          external: true,
         }}
         secondaryCta={{ text: "View Our Services", href: "/services" }}
         backgroundGradient
@@ -187,15 +188,13 @@ export default function HomePage() {
 
       {/* Business Services */}
       <div className="py-5 sm:py-5 lg:py-24">
-       <FeatureGrid
-  title="Business Launch Services"
-  subtitle="Complete registration and compliance solutions to start your business legally"
-  features={businessServicesFeatures}
-  columns={3}
-/>
+        <FeatureGrid
+          title="Business Launch Services"
+          subtitle="Complete registration and compliance solutions to start your business legally"
+          features={businessServicesFeatures}
+          columns={3}
+        />
       </div>
-
-     
 
       {/* AWS Hosting Benefits */}
       <div className="py-2 sm:py-8 lg:py-16">
@@ -248,13 +247,13 @@ export default function HomePage() {
                 className="bg-card border border-border rounded-xl p-5 sm:p-6 hover:border-primary transition-smooth"
               >
                 <div className="relative h-40 w-full overflow-hidden">
-  <Image
-    src={item.image}
-    alt={item.title}
-    fill
-    className="object-cover transition-transform duration-300 hover:scale-105"
-  />
-</div>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
 
                 <h3 className="text-lg font-semibold text-foreground mb-2">
                   {item.title}
@@ -363,15 +362,19 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <CTASection
-        title="Ready to Launch Your Business?"
-        subtitle="Get a free consultation from our team today and start your journey to success."
-        primaryCta={{
-          text: "Book Free Consultation",
-          href: "/contact",
-        }}
-      />
+   <CTASection
+  title="Ready to Launch Your Business?"
+  subtitle="Get a free consultation from our team today and start your journey to success."
+  primaryCta={{
+    text: "Book Free Consultation",
+    href: `https://wa.me/917350247244?text=${encodeURIComponent(
+      "Hi! 👋 I would like to start my business journey and I'm interested in your business registration services. Please guide me through the process."
+    )}`,
+    external: true,
+    
+  }}
 
+/>
     </MainLayout>
   );
 }
