@@ -36,6 +36,8 @@ export function Navbar() {
             >
               Home
             </Link>
+ 
+
 
             <Link
               href="/about"
@@ -101,6 +103,12 @@ export function Navbar() {
               className="px-3 py-2 rounded-lg font-medium hover:text-primary hover:bg-blue-50 transition"
             >
               Contact
+            </Link>
+            <Link
+              href="/careers"
+              className="px-3 py-2 rounded-lg font-medium hover:text-primary hover:bg-blue-50 transition"
+            >
+              carreer
             </Link>
           </div>
 
@@ -208,7 +216,12 @@ export function Navbar() {
             >
               Contact
             </Link>
-
+ <Link
+              href="/careers"
+              className="block px-4 py-3 rounded-lg hover:bg-blue-50 font-medium"
+            >
+              Career
+            </Link>
          
           </div>
         )}
