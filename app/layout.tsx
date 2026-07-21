@@ -175,16 +175,16 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   name: "Business Solutions",
   image: "https://cloudtech.host/logo.png",
-  url: "https://.cloudtech.host",
-  telephone: "+91XXXXXXXXXX",
+  url: "https://cloudtech.host",
+  telephone: "+917350247244",
   email: "adityavaste@gmail.com",
 
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Your Office Address",
-    addressLocality: "Parbhani",
+    streetAddress: "hadapasar pune",
+    addressLocality: "Pune",
     addressRegion: "Maharashtra",
-    postalCode: "431401",
+    postalCode: "411028",
     addressCountry: "IN",
   },
 
