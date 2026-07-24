@@ -160,7 +160,7 @@ const organizationSchema = {
   name: "Business Solutions",
   url: "https://cloudtech.host",
   logo: "https://cloudtech.host/logo.png",
-  email: "info@yourdomain.com",
+  email: "cloudtechenquiry@gmail.com",
   telephone: "+917350247244",
   sameAs: [
     "https://www.linkedin.com/company/yourcompany",
@@ -175,16 +175,16 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   name: "Business Solutions",
   image: "https://cloudtech.host/logo.png",
-  url: "https://.cloudtech.host",
-  telephone: "+91XXXXXXXXXX",
-  email: "adityavaste@gmail.com",
+  url: "https://cloudtech.host",
+  telephone: "+917350247244",
+  email: "cloudtechenquiry@gmail.com",
 
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Your Office Address",
-    addressLocality: "Parbhani",
+    streetAddress: "hadapasar pune",
+    addressLocality: "Pune",
     addressRegion: "Maharashtra",
-    postalCode: "431401",
+    postalCode: "411028",
     addressCountry: "IN",
   },
 
@@ -218,7 +218,7 @@ const professionalServiceSchema = {
 
   "@id": "https://cloudtech.host/#professionalservice",
 
-  name: "Your Company Name",
+  name: "CloudTech",
 
   url: "https://cloudtech.host",
 
@@ -231,7 +231,7 @@ const professionalServiceSchema = {
 
   telephone: "+91-7350247244",
 
-  email: "support@cloudtech.host",
+  email: "cloudtechenquiry@gmail.com",
 
   priceRange: "₹₹",
 
@@ -272,7 +272,7 @@ const professionalServiceSchema = {
   ],
 
   hasOfferCatalog: {
-    "@type": "OfferCatalog",
+    "@type": "serviceType",
     name: "Business Services",
     itemListElement: [
       {
@@ -368,9 +368,9 @@ const websiteSchema = {
 
   url: "https://cloudtech.host",
 
-  name: "Your Company Name",
+  name: "CloudTech",
 
-  alternateName: "Your Brand Name",
+  alternateName: "CloudTech - Business Solutions",
 
   description:
     "Professional website development, AWS managed hosting, GST Registration, IEC Registration, Udyam Registration, Shop Act License, Trademark Registration, and business documentation services across India.",
@@ -378,13 +378,7 @@ const websiteSchema = {
   inLanguage: "en-IN",
 
   publisher: {
-    "@id": "https://cloudtech.hostcom/#organization",
-  },
-
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://cloudtech.host/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
+    "@id": "https://cloudtech.host/#organization",
   },
 };
 
