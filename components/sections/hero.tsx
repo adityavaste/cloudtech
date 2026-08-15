@@ -170,7 +170,7 @@ export function Hero({
           >
             {/* Replace with your actual video URL */}
             <source
-              src="/home/aditya/Downloads/hero-section.mp4"
+              src="https://res.cloudinary.com/dxj0d1g5v/video/upload/v1697040000/hero-background-video.mp4"
               type="video/mp4"
             />
           </video>
