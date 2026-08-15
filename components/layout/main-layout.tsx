@@ -8,9 +8,10 @@ export function MainLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-grow">
-        {children}
-      </main>
+    
+<main className="pt-16 sm:pt-18 lg:pt-20">
+  {children}
+</main>
 
       <FloatingButtons />
 
