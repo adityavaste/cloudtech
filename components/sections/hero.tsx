@@ -170,7 +170,7 @@ export function Hero({
           >
             {/* Replace with your actual video URL */}
             <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-city-11748-large.mp4"
+              src="/home/aditya/Downloads/hero-section.mp4"
               type="video/mp4"
             />
           </video>
