@@ -15,8 +15,8 @@ export const shopActServiceSchema: WithContext<Service> = {
     "@type": "ProfessionalService",
     name: "CloudTech",
     url: BASE_URL,
-    telephone: "+91-XXXXXXXXXX", // Replace
-    email: "support@cloudtech.host", // Replace
+    telephone: "+91-7350247244", // Replace
+    email: "cloudtechenquiry@gmail.com", // Replace
   },
 
   serviceType: "Shop Act Registration",

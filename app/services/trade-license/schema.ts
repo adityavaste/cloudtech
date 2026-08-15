@@ -15,8 +15,8 @@ export const tradeLicenseServiceSchema: WithContext<Service> = {
     "@type": "ProfessionalService",
     name: "CloudTech",
     url: BASE_URL,
-    telephone: "+91-XXXXXXXXXX", // Replace with your number
-    email: "support@cloudtech.host", // Replace with your email
+    telephone: "+91-7350247244", // Replace with your number
+    email: "cloudtechenquiry@gmail.com", // Replace with your email
   },
 
   serviceType: "Trade License Registration",
