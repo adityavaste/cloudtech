@@ -40,7 +40,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://cloudtech.host"),
   title: "Business Registration & Website Development Services | Launch in 14 Days",
   description:
     "Get your business legally registered (GST, Shop Act, Udyam, IEC) and a professional website live in 14 days. Flat pricing, no hidden fees. 2+ businesses launched.",
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     title: "Launch Your Business in 14 Days — Registration + Website",
     description:
       "From GST to going live — we handle the paperwork and the website so you can focus on customers.",
-    url: "https://yourdomain.com",
-    siteName: "Your Company Name",
+    url: "https://cloudtech.host",
+    siteName: "CloudTech",
     images: [
       {
         url: "/og-image.jpg",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://yourdomain.com" },
+  alternates: { canonical: "https://cloudtech.host" },
 };
 
 export default function Home() {
